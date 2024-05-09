@@ -102,5 +102,60 @@
         "CMAKE_BUILD_TYPE": "Release"
       }
     }
+  ],
+  "testPresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "configuration": "Debug"
+    },
+    {
+      "inherits": "base",
+      "name": "gcc-debug-ninja-test",
+      "description": "GCC Debug Ninja Test",
+      "configurePreset": "gcc-debug-ninja"
+    },
+    {
+      "inherits": "base",
+      "name": "gcc-debug-make-test",
+      "description": "GCC Debug Make Test",
+      "configurePreset": "gcc-debug-make"
+    },
+    {
+      "inherits": "base",
+      "name": "gcc-release-ninja-test",
+      "description": "GCC Release Ninja Test",
+      "configurePreset": "gcc-release-ninja"
+    },
+    {
+      "inherits": "base",
+      "name": "gcc-release-make-test",
+      "description": "GCC Release Make Test",
+      "configurePreset": "gcc-release-make"
+    },
+    {
+      "inherits": "base",
+      "name": "clang-debug-ninja-test",
+      "description": "Clang Debug Ninja Test",
+      "configurePreset": "clang-debug-ninja"
+    },
+    {
+      "inherits": "base",
+      "name": "clang-debug-make-test",
+      "description": "Clang Debug Make Test",
+      "configurePreset": "clang-debug-make"
+    },
+    {
+      "inherits": "base",
+      "name": "clang-release-ninja-test",
+      "description": "Clang Release Ninja Test",
+      "configurePreset": "clang-release-ninja"
+    },
+    {
+      "inherits": "base",
+      "name": "clang-release-make-test",
+      "description": "Clang Release Make Test",
+      "configurePreset": "clang-release-make"
+    }
   ]
 }
