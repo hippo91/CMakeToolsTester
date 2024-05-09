@@ -27,11 +27,6 @@ std::vector<std::size_t> computeFibonacciSequence(const std::size_t n)
 
 std::size_t computeNthTerm(const std::size_t n)
 {
-  if (n <= 0)
-  {
-    throw std::out_of_range("n must be greater than 0");
-  }
-
   if (n == 1)
     return 0;
   if (n == 2)
