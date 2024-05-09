@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 1
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/../cmaketoolstester_build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES"
+      }
+    },
+    {
+      "inherits": "base",
+      "name": "gcc-base",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+    {
+      "inherits": "gcc-base",
+      "name": "gcc-debug-ninja",
+      "description": "GCC Debug Ninja",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "inherits": "gcc-base",
+      "name": "gcc-debug-make",
+      "description": "GCC Debug Make",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "inherits": "gcc-base",
+      "name": "gcc-release-ninja",
+      "description": "GCC Release Ninja",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "inherits": "gcc-base",
+      "name": "gcc-release-make",
+      "description": "GCC Release Make",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "inherits": "base",
+      "name": "clang-base",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    },
+    {
+      "inherits": "clang-base",
+      "name": "clang-debug-ninja",
+      "description": "Clang Debug Ninja",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "inherits": "clang-base",
+      "name": "clang-debug-make",
+      "description": "Clang Debug Make",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "inherits": "clang-base",
+      "name": "clang-release-ninja",
+      "description": "Clang Release Ninja",
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "inherits": "clang-base",
+      "name": "clang-release-make",
+      "description": "Clang Release Make",
+      "generator": "Unix Makefiles",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ]
+}
